@@ -68,7 +68,7 @@ export default async function WikiPage({ params }: PageProps) {
                                     <FileText className="w-4 h-4" /> Description
                                 </span>
                                 <div
-                                    className="prose prose-sm dark:prose-invert max-w-none prose-a:text-primary hover:prose-a:text-primary/80"
+                                    className="prose prose-sm dark:prose-invert max-w-none prose-a:text-primary [&_a:hover]:text-primary/80"
                                     dangerouslySetInnerHTML={{ __html: file.description }}
                                 />
                             </div>
@@ -81,7 +81,7 @@ export default async function WikiPage({ params }: PageProps) {
                                         <User className="w-4 h-4" /> Author / Source
                                     </span>
                                     <div
-                                        className="text-sm prose prose-sm dark:prose-invert max-w-none prose-a:text-primary hover:prose-a:text-primary/80"
+                                        className="text-sm prose prose-sm dark:prose-invert max-w-none prose-a:text-primary [&_a:hover]:text-primary/80"
                                         dangerouslySetInnerHTML={{ __html: file.author }}
                                     />
                                 </div>
@@ -92,7 +92,7 @@ export default async function WikiPage({ params }: PageProps) {
                                         <Calendar className="w-4 h-4" /> Date
                                     </span>
                                     <div
-                                        className="text-sm prose prose-sm dark:prose-invert max-w-none prose-a:text-primary hover:prose-a:text-primary/80"
+                                        className="text-sm prose prose-sm dark:prose-invert max-w-none prose-a:text-primary [&_a:hover]:text-primary/80"
                                         dangerouslySetInnerHTML={{ __html: file.date }}
                                     />
                                 </div>
@@ -124,7 +124,7 @@ export default async function WikiPage({ params }: PageProps) {
 
     // Render the Article UI, injecting the pre-rendered HTML from the Wikipedia API
     return (
-        <article className="prose prose-slate dark:prose-invert prose-headings:font-serif prose-h1:text-4xl prose-h1:font-bold prose-h2:text-2xl prose-h2:border-b-0 prose-a:text-primary hover:prose-a:text-primary/80 prose-a:no-underline hover:prose-a:underline max-w-none transition-colors duration-300 wiki-content animate-in fade-in duration-500">
+        <article className="prose prose-slate dark:prose-invert prose-headings:font-serif prose-h1:text-4xl prose-h1:font-bold prose-h2:text-2xl prose-h2:border-b-0 prose-a:text-primary [&_a:hover]:text-primary/80 prose-a:no-underline [&_a:hover]:underline max-w-none transition-colors duration-300 wiki-content animate-in fade-in duration-500">
             {/* Strip away HTML tags from displaytitle purely for the `<h1/>` page header */}
             <h1 className="mb-6">{page.displaytitle.replace(/<[^>]+>/g, '')}</h1>
 
