@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { AppLayout } from "@/components/app-layout";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,7 +39,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AppLayout>{children}</AppLayout>
+          {children}
         </ThemeProvider>
       </body>
     </html>
