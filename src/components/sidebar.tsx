@@ -67,7 +67,7 @@ export function Sidebar({ className, onNavigate, ...props }: SidebarProps) {
         <div className={cn("pb-12 h-full", className)} {...props}>
             <div className="space-y-4 py-4">
                 <div className="px-3 py-2">
-                    <div className="flex items-center mb-6 pl-2 space-x-2 text-primary">
+                    <div className="md:hidden flex items-center mb-6 pl-2 space-x-2 text-primary">
                         <BookOpen className="h-6 w-6" />
                         <h2 className="text-xl font-bold tracking-tight">WikiDream</h2>
                     </div>
