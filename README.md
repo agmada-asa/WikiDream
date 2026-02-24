@@ -2,6 +2,10 @@
 
 WikiDream is a high-end, minimalist Wikipedia reader application designed to elevate the reading experience of the world's largest encyclopedia. Built with modern web technologies and a focus on beautiful, functional design, WikiDream provides a distraction-free, aesthetically pleasing environment for knowledge discovery.
 
+## Try it out
+
+You can try out the live version of WikiDream here: [https://wikidream.vercel.app/wiki/Wikipedia](https://wikidream.vercel.app/wiki/Wikipedia)
+
 ## Features
 
 - **Elegant Typography & Layout**: Carefully crafted article views with optimal line lengths, spacing, and typography using `@tailwindcss/typography`.
