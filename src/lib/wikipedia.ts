@@ -178,7 +178,15 @@ export async function getWikipediaFile(filename: string): Promise<WikiFile | nul
 
         // The MediaWiki API returns pages as a dictionary keyed by arbitrary page IDs.
         // We grab the first (and only) result regardless of the key name.
-        const pages = Object.values(data.query.pages) as any[];
+        const pages = Object.values(data.query.pages) as Array<{
+            missing?: string;
+            title: string;
+            imageinfo?: Array<{
+                url: string;
+                descriptionurl: string;
+                extmetadata?: Record<string, { value: string }>;
+            }>;
+        }>;
         if (pages.length === 0 || pages[0].missing !== undefined) return null;
 
         const page = pages[0];
