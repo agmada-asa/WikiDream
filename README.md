@@ -1,8 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WikiDream
+
+WikiDream is a high-end, minimalist Wikipedia reader application designed to elevate the reading experience of the world's largest encyclopedia. Built with modern web technologies and a focus on beautiful, functional design, WikiDream provides a distraction-free, aesthetically pleasing environment for knowledge discovery.
+
+## Features
+
+- **Elegant Typography & Layout**: Carefully crafted article views with optimal line lengths, spacing, and typography using `@tailwindcss/typography`.
+- **Glassmorphism Aesthetic**: Modern, premium UI utilizing subtle translucency and blurs to create depth and focus.
+- **Seamless Dark/Light Mode**: Full support for system preferences and manual toggling, ensuring comfortable reading in any environment.
+- **Responsive Navigation**: A robust sidebar-based layout that seamlessly transforms into a mobile-friendly drawer on smaller screens.
+- **Intelligent Search**: Centered, command-palette style search for lightning-fast article discovery.
+- **Dynamic Table of Contents**: Collapsible, sticky ToC that provides quick structural overview of the article.
+- **Smart Link Handling**: Intelligent redirection for external links and automatic routing for internal Wikipedia links to stay within the WikiDream experience.
+- **Floating Progress Bar**: Visual indicator of your reading progress as you scroll through long articles.
+
+## Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **UI Library**: [React](https://react.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Components**: [shadcn/ui](https://ui.shadcn.com/) (built on Radix UI primitives)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Theming**: `next-themes`
+
+## How it Works
+
+WikiDream acts as a modern, custom frontend for Wikipedia. It utilizes dynamic routing in Next.js (`/wiki/[slug]`) to fetch and present article data dynamically.
+
+1. **Routing**: When a user navigates to an article (e.g., `/wiki/Alan_Turing`), the Next.js App Router handles the dynamic route segment.
+2. **Data Fetching**: The application fetches the corresponding article content, typically utilizing Wikipedia's APIs.
+3. **Parsing & Rendering**: The raw content is parsed and sanitized. Internal Wikipedia links are intelligently rewritten to point back to WikiDream's `/wiki/...` routes, keeping the user immersed in the app. External links (like images, external references) are carefully handled to either open appropriately or redirect to the original source, avoiding broken links or missing resources.
+4. **Presentation**: The content is injected into a beautifully crafted typography container, surrounded by our custom application layout which includes the dynamic sidebar, theme toggle, and search functionality.
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +51,6 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application running locally.
