@@ -63,7 +63,7 @@ export function SearchCommand() {
                 </kbd>
             </button>
             <Dialog open={open} onOpenChange={setOpen}>
-                <DialogContent className="overflow-hidden p-0 shadow-lg">
+                <DialogContent className="overflow-hidden p-0 shadow-lg top-0 translate-y-0 max-w-none rounded-none w-full sm:top-[50%] sm:-translate-y-1/2 sm:max-w-lg sm:rounded-lg">
                     <DialogTitle className="sr-only">Search</DialogTitle>
                     <Command shouldFilter={false} className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
                         <CommandInput
