@@ -4,7 +4,7 @@ WikiDream is a high-end, minimalist Wikipedia reader application designed to ele
 
 ## Try it out
 
-You can try out the live version of WikiDream here: [https://wikidream.vercel.app/wiki/Wikipedia](https://wikidream.vercel.app/wiki/Wikipedia)
+You can try out the live version of WikiDream here: [https://wikidream.vercel.app/](https://wikidream.vercel.app/)
 
 ## Features
 
